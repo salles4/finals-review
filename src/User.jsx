@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 
 function User() {
   //create User in mongodb and replace this ID
-  const ID = "671b15429c31e959d7501095";
+  const ID = localStorage.getItem("user_id") || "671a82189c31e959d750108f";
+  //stores all user Data
   const [userData, setUserData] = useState({name:"", movies:[]});
 
   const [addtocart, setAddtocart] = useState("")
